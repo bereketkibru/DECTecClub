@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TEC Club • Register</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon1.png">
+    <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./b/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/log.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-light bg-active">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="./img/icons8-blogger-filled-500(1).png" class="d-inline-block align-top" alt="">
+            <span>TEC Club</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid">
+<div class="row mt-5">
+    <div class="col-md-6 m-auto">
+      <div class="card card-body">
+        <h1 class="text-center mb-3">
+          <i class="fas fa-user-plus"></i> Register
+        </h1>
+        <% include ./partials/messages %>
+        <form action="/register" method="POST">
+          <div class="form-group">
+            <label for="fname">First Name</label>
+            <input
+              type="name"
+              id="fname"
+              name="fname"
+              class="form-control"
+              placeholder="Enter First Name"
+              value="<%= typeof fname != 'undefined' ? fname : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="lname">Last Name</label>
+            <input
+              type="name"
+              id="lname"
+              name="lname"
+              class="form-control"
+              placeholder="Enter last Name"
+              value="<%= typeof uname != 'undefined' ? uname : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="uname">User name</label>
+            <input
+              type="name"
+              id="uname"
+              name="uname"
+              class="form-control"
+              placeholder="Enter User name"
+              value="<%= typeof uname != 'undefined' ? uname : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+              value="<%= typeof email != 'undefined' ? email : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Create Password"
+              value="<%= typeof password != 'undefined' ? password : '' %>"
+            />
+          </div>
+          <div class="form-group">
+            <label for="password2">Confirm Password</label>
+            <input
+              type="password"
+              id="password2"
+              name="password2"
+              class="form-control"
+              placeholder="Confirm Password"
+              value="<%= typeof password2 != 'undefined' ? password2 : '' %>"
+            />
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">
+            Register
+          </button>
+        </form>
+        <p class="lead mt-4">Have An Account? <a href="/login">Login</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/umd/popper.min.js"></script>
+<script src="./b/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog • Home</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon1.png">
+    <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./b/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/media.css">
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="/home">
+        <img src="./img/icons8-blogger-filled-500(1).png" class="d-inline-block align-top" alt="">
+        <span>Blog</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/home"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/announcement"><i class="fa fa-bullhorn"></i> Announcement <span class="badge badge-info">4</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/chat"><i class="fa fa-envelope"></i> Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about"><i class="fa fa-info-circle"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact"><i class="fa fa-phone"></i> Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-cog"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/user"><i class="fa fa-user"></i> Profile</a>
+                <a class="dropdown-item" href="/dashboard"><i class="fa fa-user-plus"></i>Super User</a>
+                <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<!-- <%- include("partials/header"); -%> -->
+
+  <h1><%=title%></h1>
+  <p><%=content%></p>
+
+<%- include("partials/footer"); -%>

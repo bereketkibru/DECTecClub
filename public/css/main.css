@@ -1,0 +1,304 @@
+body {
+  font-family: Arial;
+  height: 100vh;
+  background-color: #f9f9f9;
+}
+.navbar {
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 1rem;
+}
+a.navbar-brand {
+  margin-right: 3rem;
+}
+.nav-item {
+  margin-right: 1rem;
+}
+.nav-item.active > .nav-link {
+  color: #17a2b8 !important;
+  border-bottom: 3px solid #17a2b8;
+}
+.nav-link {
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+}
+.navbar-brand span {
+  font-size: 2.1rem;
+  font-weight: bold;
+}
+.navbar-brand img {
+  width: 54px;
+  border-radius: 50%;
+}
+
+
+.list-group {
+  margin-bottom: 3rem;
+}
+
+
+.card {
+  margin-bottom: 1rem;
+}
+.card img {
+  width: 100%;
+}
+.card-title {
+  margin-left: 1.5rem;
+  margin-bottom: 0;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+.card-body p {
+  font-size: 14px;
+  color: #555;
+  text-indent: 1rem;
+}
+.card-header,
+.card-footer {
+  background-color: #fff;
+}
+.card-header span.done {
+  margin-top: 1.5rem;
+}
+.card.compose {
+  padding: 1.5rem;
+  margin-bottom: 5rem;
+}
+
+
+.list-group a {
+  font-size: 1.3rem;
+}
+.list-group img {
+  border-radius: 50%;
+  margin-right: .7rem;
+}
+
+
+.post-announcement .form-control {
+  font-size: 1.3rem;
+  /* padding: 1.5rem 2rem; */
+}
+.admin .card-footer span {
+  padding: 6px 8px;
+  color: #17a2b8;
+}
+.admin .card-footer i.fa {
+  color: #17a2b8;
+  cursor: default;
+}
+.admin .card-footer span:hover {
+  border: 0;
+}
+.admin .card-footer span:hover,
+.admin .card-footer i.fa:hover {
+  cursor: default;
+}
+
+
+.list-group a {
+  font-size: 1.3rem;
+}
+.list-group img {
+  border-radius: 50%;
+  margin-right: .7rem;
+}
+
+
+.navbar-user {
+  margin-bottom: 0;
+}
+.user {
+  padding-left: 0;
+  padding-right: 0;
+}
+.user .jumbotron.up {
+  padding: 6.7rem 2rem;
+  margin-bottom: 0;
+  background-color: #17a2b8;
+  border-radius: 0;
+}
+.user .jumbotron.down {
+  padding: 2.3rem;
+  background-color: #fff;
+  border-radius: 0;
+  height: 60px !important;
+}
+.img-rounded {
+  border-radius: 50%;
+}
+.img-bordered {
+  border: 3px solid #eee;
+}
+#profileImg {
+  position: relative;
+}
+#profileImg img {
+  position: absolute;
+  margin-top: -12rem;
+}
+.side-info {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.side-info h4 {
+  /* font-weight: bold; */
+}
+#personalLinks {
+  margin-top: -2.3rem;
+  position: relative;
+}
+#personalLinks button.btn-outline-info {
+  position: absolute;
+  right: 0;
+  top: 1rem;
+  font-weight: bold;
+  border: 3px solid;
+  border-radius: 2rem;
+}
+#personalLinks button.btn-outline-info:hover {
+  border: none;
+  padding: .6rem 1rem;
+}
+#personalLinks .nav-link {
+  padding-top: 8px;
+  padding-bottom: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+#personalLinks .nav-link:hover {
+  border-bottom: 3px solid #17a2b8;
+}
+.form-check {
+    float: left;
+    width: 20%;
+}
+
+
+#chat-container {
+  background-color: #fff;
+  height: 87vh;
+  overflow-y: auto;
+  margin-top: -1rem;
+}
+#chat-container .input-group {
+  position: fixed;
+  bottom: 0;
+  width: inherit;
+  margin-bottom: .3rem;
+  width: 53%;
+}
+#chat-container .media {
+  border: 1px solid #ddd;
+  border-radius: .5rem;
+  margin-left: .5rem;
+  margin-bottom: 1rem;
+  padding: .7rem;
+  padding-bottom: .3rem;
+}
+#chat-container .space .media {
+  background-color: #f7f7f7;
+}
+#chat-container .media-body h5 {
+  margin-bottom: 0;
+}
+#chat-container .media-body p.text-muted {
+  margin-bottom: 0;
+  font-size: .9rem;
+}
+#chat-container p.chat {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-indent: 1rem;
+}
+
+
+
+
+                        /* ABOUT & CONTACT */
+.about-container,
+.contact-container {
+  padding-top: 1rem;
+  background-color: #fcfcfc;
+  margin-top: -0.99rem;
+}
+footer {
+  background-color: #eee;
+  padding-top: 1rem;
+}
+footer .footer-section {
+  float: left;
+}
+.footer-section p li {
+  padding-left: 1rem;
+}
+footer p.copyright {
+  background-color: #ddd;
+  font-size: 120%;
+  font-weight: bold;
+  margin: 0;
+  margin-top: -1rem;
+  padding: 1rem;
+}
+.about hr.half {
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+.about h2 {
+  margin-bottom: 0;
+  margin-left: .5rem;
+}
+.about p {
+  text-indent: 1rem;
+}
+.about p,
+.about li {
+  font-size: 1.05rem;
+}
+.about .card {
+  border-top: 2px solid #17a2b8;
+  padding: 1rem;
+}
+.about .card i.fa-eye,
+.about .card i.fa-bullseye {
+  color: #17a2b8;
+}
+.about .section {
+  margin-top: 2rem;
+}
+.about .section p {
+  text-indent: 2rem;
+}
+
+.contact h4 span {
+  margin-right: 1rem;
+}
+.contact h4 {
+  margin-top: 1rem;
+}
+.contact .social img {
+  width: 40px;
+  margin-right: 1rem;
+}
+.contact .col-md-8 > p {
+  font-size: 1.18rem;
+}
+.contact #contact-intro {
+  margin-top: 1.5rem;
+  font-size: 1.2rem;
+  text-align: justify;
+  text-indent: 2.3rem;
+}
+.contact p i.fa {
+  font-size: 1.5rem;
+  background-color: #17a2b8;
+  border: 1px solid #17a2b8;
+  border-radius: 50%;
+  padding: .7rem;
+  margin-right: 1rem;
+  color: #fff;
+}
+.contact p i.fa-map-marker {
+  padding: .6rem .8rem;
+}

@@ -1,0 +1,99 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TEC Club • Chat</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon1.png">
+    <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./b/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="/home">
+        <img src="./img/icons8-blogger-filled-500(1).png" class="d-inline-block align-top" alt="">
+        <span>TEC Club</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/home"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/announcement"><i class="fa fa-bullhorn"></i> Announcement <span class="badge badge-info"></span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/chat"><i class="fa fa-envelope"></i> Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about"><i class="fa fa-info-circle"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact"><i class="fa fa-phone"></i> Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                <i class="fa fa-cog"></i>
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="/user"><i class="fa fa-user"></i> Profile</a>
+                  <a class="dropdown-item" href="/dashboard"><i class="fa fa-user-plus"></i>Super User</a>
+                  <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+              </div>
+            </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+      <div id="chat-container">
+        <div class="space">
+            <%  message.forEach(function(item){ %>
+                  <div class="media col-md-10">
+            <img src="./img/photo.jpg" width="60px" class="align-self-start mr-3 img-rounded" alt="...">
+            <div class="media-body">
+              <h5 class=""><%= item.mbody %></h5>
+              <p class="text-muted">@<a class="text-muted" href="/uProfile/<%=item.by%>"><%=item.by  %></a></p>
+              <p class="chat"> </p>
+              <span class="text-muted float-right">
+                  <% y=item.date.toString()%>
+                  <%var x=y.substring(3,24)%>
+                <%=x%></span>
+            </div>
+          </div> 
+          <%  }) %> 
+                </div>
+                <form class="item" action="/chat" method="POST">
+          <div class="input-group">
+            <input type="text" name="newItem" id="content" class="form-control" placeholder="Write something..." aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+              <button class="btn btn-outline-info" type="submit" name="send" id="button-addon2">Send</button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>  <!-- END of col-md-8  -->
+    
+  </div>
+</div>
+
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/umd/popper.min.js"></script>
+    <script src="./b/js/bootstrap.min.js"></script>
+    <script>setTimeout(function() { window.location=window.location;},20000);</script>
+  </body>
+</html>

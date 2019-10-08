@@ -1,0 +1,114 @@
+.hidden {
+  display: none !important;
+}
+
+.navbar i.fa {
+  font-size: 1.2rem;
+  margin-right: 3px;
+}
+.navbar i.fa-phone {
+  font-size: 1.15rem;
+}
+.card-footer i.fa {
+  color: #999;
+  font-size: 1.15rem;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.card-footer span {
+  padding: 8px 10px;
+  margin-left: 1rem;
+}
+.card-footer span:hover {
+  padding: 6px 8px;
+  color: #17a2b8;
+  border: 2px solid #17a2b8;
+}
+.card-footer span:hover,
+.card-footer i.fa:hover {
+  color: #17a2b8;
+  cursor: pointer;
+}
+.card-header span {
+  margin-left: 2rem;
+}
+.card-header span i.fa {
+  font-size: 1.2rem;
+  padding: .3rem;
+  margin-right: .5rem;
+  cursor: pointer;
+}
+h4 i.fa.fa-check-circle {
+  color: #17a2b8 !important;
+}
+i.fa-chevron-circle-down {
+  cursor: pointer;
+  color: #17a2b8;
+  font-size: 3rem;
+  margin-top: -15%;
+}
+
+.bg-img {
+  width: 100%;
+  margin-top: -.99rem;
+  margin-bottom: 1rem;
+}
+
+#profileImg {
+  display: none;
+}
+/* #personalLinks button.btn-outline-info {
+  display: none;
+} */
+#personalLinks {
+  display: none;
+}
+
+.visible-sm,
+.visible-md {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .hidden-sm {
+    display: none;
+  }
+  .visible-sm {
+    display: inherit;
+  }
+}
+@media (max-width: 768px) {
+  .hidden-md {
+    display: none;
+  }
+  .visible-md {
+    display: inherit;
+  }
+}
+
+    /* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+}
+
+    /* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  #personalLinks {
+    display: initial;
+  }
+  #personalLinks button.btn-outline-info {
+    display: initial;
+  }
+}
+
+    /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  #profileImg {
+    display: initial;
+  }
+}
+
+    /* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}

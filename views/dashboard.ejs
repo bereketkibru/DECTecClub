@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TEC • Admin</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon1.png">
+    <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./b/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/media.css">
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="/home">
+        <img src="./img/icons8-blogger-filled-500(1).png" class="d-inline-block align-top" alt="">
+        <span>TEC Club</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="/dashboard"><i class="fa fa-home"></i>Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/compose"><i class="fa fa-edit"></i>Compose P<span class="badge badge-info"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/comann"><i class="fa fa-edit"></i>Compose A</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/chatd"><i class="fa fa-envelope"></i> chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/update"><i class="fa fa-phone"></i> Update user</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-cog"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/user"><i class="fa fa-user"></i> Profile</a>
+                <a class="dropdown-item" href="/dashboard"><i class="fa fa-user-plus"></i>Super User</a>
+                <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<%var pos=[]%>
+<%var pimag=[]%>
+<%var ptitle=[]%>
+<%var pDate=[]%>
+<%var pByh=[]%>
+
+<%  posts.forEach(function(post){ %>
+<%ptitle.push(post.title)%>
+<%pos.push(post.content) %>
+<%pimag.push(post.imag) %>
+<%pDate.push(post.date) %>
+<%pByh.push(post.pBy) %>
+
+<% i++ %>
+
+<% }) %>
+<%var y=ptitle.length%>
+<%var x=y-10%>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8">
+<% for(var i=y-1;i>x+1;i--){%>
+  <div class="card">
+    <div class="card-header">
+      <h4 class="card-title float-left"><%=ptitle[i]%></h4>
+    </div>
+      <img src="./Data/Post/<%=pimag[i]%>" " alt="...">
+      
+    <div class="card-body">
+      <p class="card-text"><%=pos[i]%> </p>
+    </div>
+    <div class="card-footer text-muted">
+        <div class="float-left">
+            <cite class="text-muted">@<a href="/uProfile/<%=pByh[i]%>" class="text-muted"><%=pByh[i]%></a></cite>
+          
+        </div>
+      <% q=pDate[i].toString()%>
+      <%var w=q.substring(3,16)%>
+      <div class="float-right">
+          <%=w %>          
+      </div>
+    </div>
+<%}%>
+</div>
+</div>
+</div>
+
+
+
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/umd/popper.min.js"></script>
+<script src="./b/js/bootstrap.min.js"></script>
+  </body>
+</html>

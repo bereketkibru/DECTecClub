@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TEC • Admin</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon1.png">
+    <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./b/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/media.css">
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white">
+    <div class="container">
+      <a class="navbar-brand" href="/home">
+        <img src="./img/icons8-blogger-filled-500(1).png" class="d-inline-block align-top" alt="">
+        <span>TEC</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/dashboard"><i class="fa fa-user-secret"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/compose"><i class="fa fa-edit"></i>Compose P<span class="badge badge-info"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/comann"><i class="fa fa-edit"></i>Compose A</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/chatd"><i class="fa fa-envelope"></i> chat</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="/update"><i class="fa fa-phone"></i> Update user</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <i class="fa fa-cog"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/user"><i class="fa fa-user"></i> Profile</a>
+                <a class="dropdown-item" href="/dashboard"><i class="fa fa-user-plus"></i>Super User</a>
+                <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+
+<div class="container">
+    <div class="row">
+      <div class="col-md-8">
+<h4>Edit Profile</h4>
+</div>
+<div class="card-body">
+  <form action="/update" method="POST">
+    <div class="form-group row">
+        <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">User  Email to be updated </label>
+        <div class="col-sm-8 col-md-8 col-lg-6">
+          <input type="email" name="email"class="form-control" placeholder="email">
+        </div>
+      </div>
+   
+    <fieldset class="form-group">
+      <div class="row">
+        <legend class="col-form-label col-lg-3 col-sm-3 pt-0">Role</legend>
+        <div class="col-sm-8 col-md-8 col-lg-6">
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" value="user">
+            <label class="form-check-label" for="gridRadios1">User</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="radio" name="gridRadios" value="admin">
+            <label class="form-check-label" for="gridRadios2">Super User</label>
+          </div>
+          
+        </div>
+      </div>
+    </fieldset>
+    <div class="form-group row">
+      <div class="col-sm-11 col-md-11 col-lg-9">
+        <button id="updateProfile" type="submit" class="btn btn-outline-info float-right">Update Profile</button>
+      </div>
+    </div>
+  </form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+
+<script src="./js/umd/popper.min.js"></script>
+<script src="./b/js/bootstrap.min.js"></script>
+</body>
+</html>

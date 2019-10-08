@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>TEC Club • Profile</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon1.png">
+    <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./b/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/public.css">
+    <link rel="stylesheet" href="./css/media.css">
+  </head>
+  <body>
+
+<header>
+  <nav class="navbar navbar-expand-lg navbar-light bg-white navbar-user">
+    <div class="container">
+      <a class="navbar-brand" href="/home">
+        <img src="./img/icons8-blogger-filled-500(1).png" class="d-inline-block align-top" alt="">
+        <span>TEC Club</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/home"><i class="fa fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/announcement"><i class="fa fa-bullhorn"></i> Announcement <span class="badge badge-info"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/chat"><i class="fa fa-envelope"></i> Chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/about"><i class="fa fa-info-circle"></i> About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact"><i class="fa fa-phone"></i> Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+              <i class="fa fa-cog"></i>
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="/user"><i class="fa fa-user"></i> Profile</a>
+                <a class="dropdown-item" href="/dashboard"><i class="fa fa-user-plus"></i>Super User</a>
+                <a class="dropdown-item" href="/logout"><i class="fa fa-sign-out-alt"></i> Logout</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="container-fluid user">
+  <div class="jumbotron up">
+
+  </div>
+  <div class="jumbotron down">
+    <div class="container">
+      <div class="row">
+        <div id="profileImg" class="col-md-3">
+          <img class="img-thumbnail img-rounded" width="210px" src="./img/photo.jpg" alt="...">
+        </div>
+        <div id="personalLinks" class="col-md-9">
+          
+          <button id="editProfile" type="button" class="btn btn-outline-info float-right" name="button">Edit Profile</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="side-info">
+        <h4><%=us.fname%> <%=us.lname%> <%if(us.uname==="admin"){%>
+          <i title="Verified" class="fa fa-user-secret"></i> <%}%><%if(us.role==="admin"){%>
+            <i title="Verified" class="fa fa-check-circle"></i>
+           
+        <%}%></h4>
+        <p class="text-muted">@<a href="#" class="text-muted"><%=us.uname%></a></p>
+        <p class="text-muted"><i class="fa fa-calendar-alt"></i> Date Joined &nbsp; <% y=us.date.toString()%>
+          <%var x=y.substring(3,16)%>
+          <%=x %>%></p>
+      </div>
+    </div>
+    <div class="col-sm-12 col-md-8">
+      <div id="basic-info" class="card">
+        <div class="card-header">
+          <h4>Basic</h4>
+        </div>
+        <div class="card-body">
+          <form>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">Username</label>
+              <div class="col-sm-8 col-md-8 col-lg-6">
+                <input type="email" class="form-control" placeholder="Username" value="<%=us.uname%>" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">Department</label>
+              <div class="col-sm-8 col-md-8 col-lg-6">
+                <input type="text" class="form-control" placeholder="Department" value="<%=us.department%>" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">Year</label>
+              <div class="col-sm-8 col-md-8 col-lg-6">
+                <input type="text" class="form-control" placeholder="Year" value="<%=us.year%>" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">Email</label>
+              <div class="col-sm-8 col-md-8 col-lg-6">
+                <input type="email" class="form-control" placeholder="Email" value="<%=us.email%>" disabled>
+              </div>
+            </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">Phone</label>
+              <div class="col-sm-8 col-md-8 col-lg-6">
+                <input type="text" class="form-control" placeholder="phone number" value="<%=us.phone%>" disabled>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div id="basic-info-edit" class="card hidden">
+        <div class="card-header">
+          <h4>Edit Profile</h4>
+        </div>
+        <div class="card-body">
+          <form action="/user" method="POST">
+            <div class="form-group row">
+                <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">Phone</label>
+                <div class="col-sm-8 col-md-8 col-lg-6">
+                  <input type="text" name="phone"class="form-control" placeholder="Phone" value="+251">
+                </div>
+              </div>
+            <div class="form-group row">
+              <label for="inputEmail3" class="col-lg-3 col-sm-3 col-form-label">Department</label>
+              <div class="col-sm-8 col-md-8 col-lg-6">
+                <input type="text" name="department"class="form-control" placeholder="Department" value="<%=us.department%>">
+              </div>
+            </div>
+            <fieldset class="form-group">
+              <div class="row">
+                <legend class="col-form-label col-lg-3 col-sm-3 pt-0">Year</legend>
+                <div class="col-sm-8 col-md-8 col-lg-6">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" value="1">
+                    <label class="form-check-label" for="gridRadios1">1st</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" value="2">
+                    <label class="form-check-label" for="gridRadios2">2nd</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" value="3">
+                    <label class="form-check-label" for="gridRadios3">3rd</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" value="4">
+                    <label class="form-check-label" for="gridRadios2">4th</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="gridRadios" value="5">
+                    <label class="form-check-label" for="gridRadios3">5th</label>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+            <div class="form-group row">
+              <div class="col-sm-11 col-md-11 col-lg-9">
+                <button id="updateProfile" type="submit" class="btn btn-outline-info float-right">Update Profile</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+  $updt = $('#updateProfile');
+  $edit = $('#editProfile');
+  $basic = $('#basic-info');
+  $basicEdit = $('#basic-info-edit');
+  $edit.on('click', function(){
+    $basic.addClass('hidden');
+    $basicEdit.removeClass('hidden');
+    $edit.addClass('hidden');
+  });
+  $updt.on('click', function(){
+    $basicEdit.addClass('hidden');
+    $basic.removeClass('hidden');
+    $edit.removeClass('hidden');
+  });
+</script>
+
+    <script src="./js/umd/popper.min.js"></script>
+    <script src="./b/js/bootstrap.min.js"></script>
+  </body>
+</html>

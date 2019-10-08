@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Blog • Login</title>
+    <link rel="shortcut icon" type="image/png" href="./favicon1.png">
+    <link rel="stylesheet" href="./web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="./b/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/log.css">
+
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-light bg-active">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="./img/icons8-blogger-filled-500(1).png" class="d-inline-block align-top" alt="">
+            <span>TEC Club</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+    <div class="container-fluid">
+<div class="row justify-content-md-center">
+    <div class="col-md-6">
+      <div class="card login shadow-lg rounded">
+        <h1 class="text-center text-muted"><i class="fas fa-sign-in-alt"></i>Login</h1>
+        <% include ./partials/messages %>
+        <form action="/login" method="POST">
+          <div class="form-row">
+            <div class="col-md-12 mb-3">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              class="form-control"
+              placeholder="Enter Email"
+            />
+          </div>
+          <div class="col-md-12 mb-3">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              class="form-control"
+              placeholder="Enter Password"
+            />
+          </div>
+        </div>
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+     </form>
+        <p class="lead mt-4">
+          No Account? <a href="/register">Register</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="./js/jquery-3.2.1.min.js"></script>
+<script src="./js/umd/popper.min.js"></script>
+<script src="./b/js/bootstrap.min.js"></script>
+</body>
+</html>
